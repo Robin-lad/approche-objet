@@ -5,6 +5,11 @@ public class Personne {
 	private String nom;
 	private String prenom;
 	private AdressePostale adressePostale;
+	
+	public Personne(String n, String p) {
+		this.nom = n;
+		this.prenom = p;
+	}
 
 	public Personne(String n, String p, AdressePostale ap) {
 		this.nom = n;
