@@ -1,19 +1,19 @@
 package entites;
 
 public class Personne {
-
+ 
 	private String nom;
 	private String prenom;
 	private AdressePostale adressePostale;
-	
-	public Personne(String n, String p) {
-		this.nom = n;
+
+	public Personne(String p, String n) {
 		this.prenom = p;
+		this.nom = n;
 	}
 
-	public Personne(String n, String p, AdressePostale ap) {
-		this.nom = n;
+	public Personne(String p, String n, AdressePostale ap) {
 		this.prenom = p;
+		this.nom = n;
 		this.adressePostale = ap;
 	}
 
@@ -39,5 +39,9 @@ public class Personne {
 
 	public void setAp(AdressePostale ap) {
 		this.adressePostale = ap;
+	}
+
+	public String toString() {
+		return prenom + " " + nom.toUpperCase() + " " + adressePostale;
 	}
 }

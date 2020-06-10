@@ -44,4 +44,8 @@ public class AdressePostale {
 	public void setVille(String ville) {
 		this.ville = ville;
 	}
+	
+	public String toString() {
+		return " Num : " + numero + " " + libelle + " " + code + " " + ville ;
+	}
 }
