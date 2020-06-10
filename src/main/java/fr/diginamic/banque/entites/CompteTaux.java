@@ -18,6 +18,7 @@ public class CompteTaux extends Compte {
 
 	@Override
 	public String toString() {
-		return super.toString().substring(0, super.toString().length() - 1) +  ", tauxRemun=" + tauxRemun + "]";
+		return super.toString() +  "[tauxRemun=" + tauxRemun + "]";
+		//return super.toString().substring(0, super.toString().length() - 1) +  ", tauxRemun=" + tauxRemun + "]";
 	}
 }
