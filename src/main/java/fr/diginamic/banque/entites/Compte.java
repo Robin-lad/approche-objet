@@ -23,7 +23,6 @@ public class Compte {
 	public void addCredit(Credit c){
 		calculNouveauSolde(c.getMontant());
 		this.listCredit.add(c);
-		
 	}
 	
 	public void addDebit(Debit d){
