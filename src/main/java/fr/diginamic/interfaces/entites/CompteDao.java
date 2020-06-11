@@ -8,6 +8,8 @@ import java.util.ArrayList;
  * @author DIGINAMIC
  */
 public interface CompteDao {
+	
+	
 	/**
 	 * Retourne la liste de tous les comptes
 	 * 

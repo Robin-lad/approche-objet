@@ -22,10 +22,14 @@ public class Compte {
 
 	public void addCredit(Credit c) {
 		this.credits.add(c);
+		this.solde += c.getMontant();
+		this.nombreOpe++;
 	}
 
 	public void addDebit(Debit d) {
 		this.debits.add(d);
+		this.solde -= d.getMontant();
+		this.nombreOpe++;
 	}
 
 	public String getNumero() {

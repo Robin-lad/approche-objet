@@ -23,13 +23,10 @@ public class CompteDaoMem implements CompteDao {
 
 	@Override
 	public boolean supprimer(String numero) {
-		for (Compte c : tab) {
-			if (c.getNumero() == numero) {
-				System.out.println("c'est egal");
-				tab.remove(c);
+		for (int i = 0; i < tab.size(); i++) {
+			if (tab.get(i).getNumero().equals(numero)) {
+				tab.remove(tab.get(i));
 				return true;
-			} else {
-				System.out.println("pas egal");
 			}
 		}
 		return false;
@@ -37,12 +34,9 @@ public class CompteDaoMem implements CompteDao {
 
 	@Override
 	public boolean existe(String numero) {
-		for (Compte c : tab) {
-			if (c.getNumero() == numero) {
-				System.out.println("existe");
+		for (int i = 0; i < tab.size(); i++) {
+			if (tab.get(i).getNumero().equals(numero)) {
 				return true;
-			} else {
-				System.out.println("existe pas");
 			}
 		}
 		return false;
@@ -50,10 +44,9 @@ public class CompteDaoMem implements CompteDao {
 
 	@Override
 	public Compte getCompte(String numero) {
-		for(Compte c : tab) {
-			if (numero.equals(c.getNumero())) {
-				System.out.println("compte trouvé");
-				return c;
+		for (int i = 0; i < tab.size(); i++) {
+			if (numero.equals(tab.get(i).getNumero())) {
+				return tab.get(i);
 			}
 		}
 		return null;
