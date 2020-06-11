@@ -2,47 +2,47 @@ package fr.diginamic.banque.entites;
 
 import java.util.ArrayList;
 
-public class Compte {
+public class Comptes {
 	private int numero;
 	private double solde;
 	
-	private ArrayList<Credit> listCredit;
-	private ArrayList<Debit> listDebit;
+	private ArrayList<Credits> listCredit;
+	private ArrayList<Debits> listDebit;
 
-	public Compte(int numero, double solde) {
+	public Comptes(int numero, double solde) {
 		this.numero = numero;
 		this.solde = solde;
-		listCredit = new ArrayList<Credit>();
-		listDebit = new ArrayList<Debit>();
+		listCredit = new ArrayList<Credits>();
+		listDebit = new ArrayList<Debits>();
 	}
 	
 	public void calculNouveauSolde(double d) {
 		this.solde = this.solde + d;
 	}
 	
-	public void addCredit(Credit c){
+	public void addCredit(Credits c){
 		calculNouveauSolde(c.getMontant());
 		this.listCredit.add(c);
 	}
 	
-	public void addDebit(Debit d){
+	public void addDebit(Debits d){
 		calculNouveauSolde(-d.getMontant());
 		this.listDebit.add(d);
 	}
 
-	public ArrayList<Credit> getListCredit() {
+	public ArrayList<Credits> getListCredit() {
 		return listCredit;
 	}
 
-	public void setListCredit(ArrayList<Credit> listCredit) {
+	public void setListCredit(ArrayList<Credits> listCredit) {
 		this.listCredit = listCredit;
 	}
 
-	public ArrayList<Debit> getListDebit() {
+	public ArrayList<Debits> getListDebit() {
 		return listDebit;
 	}
 
-	public void setListDebit(ArrayList<Debit> listDebit) {
+	public void setListDebit(ArrayList<Debits> listDebit) {
 		this.listDebit = listDebit;
 	}
 	

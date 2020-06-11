@@ -1,10 +1,10 @@
 package fr.diginamic.banque.entites;
 
-public abstract class Operation {
+public abstract class Operations {
 	private String date;
 	private double montant;
 	
-	public Operation(String date, double montant) {
+	public Operations(String date, double montant) {
 		this.date = date;
 		this.montant = montant;
 	}

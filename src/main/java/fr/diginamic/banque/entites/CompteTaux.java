@@ -1,6 +1,6 @@
 package fr.diginamic.banque.entites;
 
-public class CompteTaux extends Compte {
+public class CompteTaux extends Comptes {
 	private double tauxRemun;
 
 	public CompteTaux(int numero, double solde, double tauxRemun) {
