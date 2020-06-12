@@ -15,7 +15,7 @@ public class TestCercle {
 	 */
 	public static void main(String[] args) {
 		Cercle cercle1 = CercleFactory.créerCercle(2);
-		Cercle cercle2 = new Cercle(5.2);
+		Cercle cercle2 = CercleFactory.créerCercle(5);
 		
 		System.out.println(cercle1);
 		System.out.println(cercle2);
