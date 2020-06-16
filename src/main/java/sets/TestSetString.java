@@ -52,7 +52,7 @@ public class TestSetString {
 
 		System.out.println(hs2);
 
-		int grandPibParHab = 0;
+		int grandPibParHab = Integer.MIN_VALUE;
 		Pays grandPibHabPays = null;
 		Iterator<Pays> pays = hs2.iterator();
 		while (pays.hasNext()) {
