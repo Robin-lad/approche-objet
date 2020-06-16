@@ -63,5 +63,7 @@ public class TestSetString {
 			}
 		}
 		System.out.println(grandPibHabPays);
+		
+		//TODO j'ai oublié de faire quelques parties de l'exo 3 TP 2
 	}
 }
