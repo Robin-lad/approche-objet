@@ -67,7 +67,7 @@ public class TestListString {
 				indexgrand = i;
 			}
 		}
-		System.out.println(tab.get(indexgrand).nom);
+		System.out.println(tab.get(indexgrand).nom + "\n");
 
 		int pluspetit = Integer.MAX_VALUE;
 		int indexpetit = -1;
