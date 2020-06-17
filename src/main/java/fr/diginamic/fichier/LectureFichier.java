@@ -21,7 +21,7 @@ public class LectureFichier {
 	public static void main(String[] args) {
 
 		try {
-			File f = new File("C:/temp/recensement_population_2016.csv");
+			File f = new File("D:\\Telechargements\\recensement_2016.csv");
 			List<String> lignes = FileUtils.readLines(f, "UTF-8");
 
 			for (String ligne : lignes) {
