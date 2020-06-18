@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Stockage de Ville dans l'arraylist villes
+ * 
  * @author robin
  *
  */

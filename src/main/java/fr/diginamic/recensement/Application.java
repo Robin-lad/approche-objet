@@ -8,6 +8,8 @@ import java.util.Scanner;
 import fr.diginamic.recensement.menu.MenuApplication;
 
 /**
+ * Classe main qui lance l'application de recensement
+ * 
  * @author robin
  *
  */
@@ -16,11 +18,10 @@ public class Application {
 	private static boolean continuer = true;
 
 	/**
+	 * Main
 	 * @param args void
 	 */
 	public static void main(String[] args) {
-		@SuppressWarnings("unused")
-		Singleton singleton = Singleton.getInstance();
 		Fichier.lectureFichier("D:\\Telechargements\\recensement_2016.csv");
 		Scanner sc = new Scanner(System.in);
 
@@ -31,14 +32,18 @@ public class Application {
 		sc.close();
 	}
 
-	/** Getter
+	/**
+	 * Getter
+	 * 
 	 * @return the continuer
 	 */
 	public static boolean isContinuer() {
 		return continuer;
 	}
 
-	/** Setter
+	/**
+	 * Setter
+	 * 
 	 * @param continuer the continuer to set
 	 */
 	public static void setContinuer(boolean continuer) {

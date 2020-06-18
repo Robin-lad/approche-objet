@@ -8,6 +8,7 @@ import java.util.Scanner;
 import fr.diginamic.recensement.Recensement;
 
 /**
+ * Recherche le nombre d'habitants du département donné
  * @author robin
  *
  */

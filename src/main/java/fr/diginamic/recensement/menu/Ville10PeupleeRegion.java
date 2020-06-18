@@ -11,6 +11,7 @@ import fr.diginamic.recensement.Recensement;
 import fr.diginamic.recensement.Ville;
 
 /**
+ * affiche les 10 villes les plus peuplées d'une région donnée
  * @author robin
  *
  */

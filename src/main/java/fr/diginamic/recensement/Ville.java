@@ -4,17 +4,32 @@
 package fr.diginamic.recensement;
 
 /**
+ * classe représentant une ville 
  * @author robin
  *
  */
 public class Ville {
+	/** codeRegion code de la région*/
 	private int codeRegion;
+	/** nomRegion nom de la region*/
 	private String nomRegion;
+	/** codeDepartement code du departement*/
 	private String codeDepartement;
+	/** codeCommune code de la commune*/
 	private int codeCommune;
+	/** nomCommune nom de la commune*/
 	private String nomCommune;
+	/** populationTotale population totale de la ville*/
 	private int populationTotale;
 
+	/** Construteur
+	 * @param codeRegion code region
+	 * @param nomRegion nom region
+	 * @param codeDepartement code departement
+	 * @param codeCommune code commune
+	 * @param nomCommune nom commune
+	 * @param populationTotale population totale
+	 */
 	public Ville(int codeRegion, String nomRegion, String codeDepartement, int codeCommune, String nomCommune,
 			int populationTotale) {
 		super();
@@ -25,6 +40,8 @@ public class Ville {
 		this.nomCommune = nomCommune;
 		this.populationTotale = populationTotale;
 	}
+	
+	// j'ai enlevé les setter car on ne va pas changer les données lues dans le fichier.
 
 	/**
 	 * Getter
@@ -33,15 +50,6 @@ public class Ville {
 	 */
 	public int getCodeRegion() {
 		return codeRegion;
-	}
-
-	/**
-	 * Setter
-	 * 
-	 * @param codeRegion the codeRegion to set
-	 */
-	public void setCodeRegion(int codeRegion) {
-		this.codeRegion = codeRegion;
 	}
 
 	/**
@@ -54,30 +62,12 @@ public class Ville {
 	}
 
 	/**
-	 * Setter
-	 * 
-	 * @param nomRegion the nomRegion to set
-	 */
-	public void setNomRegion(String nomRegion) {
-		this.nomRegion = nomRegion;
-	}
-
-	/**
 	 * Getter
 	 * 
 	 * @return the codeDepartement
 	 */
 	public String getCodeDepartement() {
 		return codeDepartement;
-	}
-
-	/**
-	 * Setter
-	 * 
-	 * @param codeDepartement the codeDepartement to set
-	 */
-	public void setCodeDepartement(String codeDepartement) {
-		this.codeDepartement = codeDepartement;
 	}
 
 	/**
@@ -90,15 +80,6 @@ public class Ville {
 	}
 
 	/**
-	 * Setter
-	 * 
-	 * @param codeCommune the codeCommune to set
-	 */
-	public void setCodeCommune(int codeCommune) {
-		this.codeCommune = codeCommune;
-	}
-
-	/**
 	 * Getter
 	 * 
 	 * @return the nomCommune
@@ -108,36 +89,11 @@ public class Ville {
 	}
 
 	/**
-	 * Setter
-	 * 
-	 * @param nomCommune the nomCommune to set
-	 */
-	public void setNomCommune(String nomCommune) {
-		this.nomCommune = nomCommune;
-	}
-
-	/**
 	 * Getter
 	 * 
 	 * @return the populationTotale
 	 */
 	public int getPopulationTotale() {
 		return populationTotale;
-	}
-
-	/**
-	 * Setter
-	 * 
-	 * @param populationTotale the populationTotale to set
-	 */
-	public void setPopulationTotale(int populationTotale) {
-		this.populationTotale = populationTotale;
-	}
-
-	@Override
-	public String toString() {
-		return "Ville [codeRegion=" + codeRegion + ", nomRegion=" + nomRegion + ", codeDepartement=" + codeDepartement
-				+ ", codeCommune=" + codeCommune + ", nomCommune=" + nomCommune + ", populationTotale="
-				+ populationTotale + "]";
 	}
 }

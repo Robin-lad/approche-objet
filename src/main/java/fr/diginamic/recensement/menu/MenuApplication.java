@@ -8,13 +8,19 @@ import java.util.Scanner;
 import fr.diginamic.recensement.Application;
 
 /**
+ * Lance le menu interactif de l'application
  * @author robin
  *
  */
 public class MenuApplication {
 
+	/** NB_AFFICHAGE nombre de villes à afficher*/
 	public static final int NB_AFFICHAGE = 10;
 
+	/**
+	 * affiche le menu de l'application et demande à l'utilisateur de choisir une option et lance la recherche faite par l'utilisateur
+	 * @param sc 
+	 */
 	public static void afficherMenu(Scanner sc) {
 		System.out.println("Veuillez choisir une option parmis les suivantes");
 		System.out.println("1. Population d'une ville donnée");

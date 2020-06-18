@@ -10,18 +10,22 @@ import java.util.List;
 import org.apache.commons.io.FileUtils;
 
 /**
+ * classe qui lit le fichier et crée des objets Ville
  * @author robin
  *
  */
 public class Fichier {
 
+	/**
+	 * lecture du fichier et crée des objets Ville
+	 * @param s string chemin vers le fichier
+	 */
 	public static void lectureFichier(String s) {
 		try {
 			File f = new File(s);
 			List<String> lignes = FileUtils.readLines(f, "UTF-8");
 			lignes.remove(0);
 			for (String ligne : lignes) {
-//				System.out.println(ligne);
 				String[] morceaux = ligne.split(";");
 //				String codeRegion = morceaux[0];
 //				String nomRegion = morceaux[1];

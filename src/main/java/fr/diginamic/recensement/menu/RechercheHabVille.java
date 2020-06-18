@@ -8,6 +8,8 @@ import java.util.Scanner;
 import fr.diginamic.recensement.Recensement;
 
 /**
+ * Recherche le nombre d'habitants de la ville donnée
+ * 
  * @author robin
  *
  */
