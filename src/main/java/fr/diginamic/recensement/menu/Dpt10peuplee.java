@@ -18,7 +18,7 @@ import fr.diginamic.recensement.Ville;
 public class Dpt10peuplee extends MenuService {
 
 	@Override
-	public boolean traiter(Scanner scanner) {
+	public void traiter(Scanner scanner) {
 		Map<String, Integer> map = new HashMap<>();
 		String format2 = "%-10s%-10s%-3s%s%n";
 
@@ -33,7 +33,6 @@ public class Dpt10peuplee extends MenuService {
 
 		super.reverse(map, format2, "Département: ");
 
-		return true;
 	}
 
 }

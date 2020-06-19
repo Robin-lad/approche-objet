@@ -5,23 +5,27 @@ package fr.diginamic.recensement.menu;
 
 import java.util.Scanner;
 
+import fr.diginamic.exceptions.RechercheException;
 import fr.diginamic.recensement.Application;
 
 /**
  * Lance le menu interactif de l'application
+ * 
  * @author robin
  *
  */
 public class MenuApplication {
 
-	/** NB_AFFICHAGE nombre de villes à afficher*/
+	/** NB_AFFICHAGE nombre de villes à afficher */
 	public static final int NB_AFFICHAGE = 10;
 
 	/**
-	 * affiche le menu de l'application et demande à l'utilisateur de choisir une option et lance la recherche faite par l'utilisateur
-	 * @param sc 
+	 * affiche le menu de l'application et demande à l'utilisateur de choisir une
+	 * option et lance la recherche faite par l'utilisateur
+	 * 
+	 * @param sc
 	 */
-	public static void afficherMenu(Scanner sc) {
+	public static void afficherMenu(Scanner sc) throws RechercheException, NumberFormatException {
 		System.out.println("Veuillez choisir une option parmis les suivantes");
 		System.out.println("1. Population d'une ville donnée");
 		System.out.println("2. Population d'un département donné");
@@ -33,15 +37,10 @@ public class MenuApplication {
 		System.out.println("8. Afficher les 10 villes les plus peuplées de France");
 		System.out.println("9. Sortir");
 
-		int menu = 0;
-		do {
-			try {
-				menu = Integer.parseInt(sc.nextLine());
-			} catch (Exception e) {
-				System.out.println("Veuillez entrer une valeur.\n");
-			}
-
-		} while (menu > 9 || menu < 1);
+		int menu = Integer.parseInt(sc.nextLine());
+		if (menu > 9 || menu < 1) {
+			throw new RechercheException("Le chiffre doit être compris entre 1 et 9.\n");
+		}
 
 		switch (menu) {
 		case 1:

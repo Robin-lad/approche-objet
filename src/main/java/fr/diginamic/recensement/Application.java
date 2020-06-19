@@ -5,6 +5,7 @@ package fr.diginamic.recensement;
 
 import java.util.Scanner;
 
+import fr.diginamic.exceptions.RechercheException;
 import fr.diginamic.recensement.menu.MenuApplication;
 
 /**
@@ -19,6 +20,7 @@ public class Application {
 
 	/**
 	 * Main
+	 * 
 	 * @param args void
 	 */
 	public static void main(String[] args) {
@@ -26,7 +28,13 @@ public class Application {
 		Scanner sc = new Scanner(System.in);
 
 		while (continuer) {
-			MenuApplication.afficherMenu(sc);
+			try {
+				MenuApplication.afficherMenu(sc);
+			} catch (RechercheException e) {
+				System.err.println(e.getMessage());
+			} catch (NumberFormatException e) {
+				System.err.println("Veuillez entrer un chiffre/nombre.\n");
+			}
 		}
 
 		sc.close();

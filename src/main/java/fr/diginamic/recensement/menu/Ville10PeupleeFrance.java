@@ -12,13 +12,14 @@ import fr.diginamic.recensement.Ville;
 
 /**
  * affiche les 10 villes les plus peuplées de france
+ * 
  * @author robin
  *
  */
 public class Ville10PeupleeFrance extends MenuService {
 
 	@Override
-	public boolean traiter(Scanner scanner) {
+	public void traiter(Scanner scanner) {
 		Map<String, Integer> map = new HashMap<>();
 		String format2 = "%-10s%-20s%-3s%s%n";
 
@@ -33,7 +34,5 @@ public class Ville10PeupleeFrance extends MenuService {
 
 		super.reverse(map, format2, "Ville: ");
 
-		return true;
 	}
-
 }

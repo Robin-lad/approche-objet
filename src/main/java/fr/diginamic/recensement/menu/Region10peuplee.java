@@ -12,13 +12,14 @@ import fr.diginamic.recensement.Ville;
 
 /**
  * affiche les 10 regions les plus peuplées
+ * 
  * @author robin
  *
  */
 public class Region10peuplee extends MenuService {
 
 	@Override
-	public boolean traiter(Scanner scanner) {
+	public void traiter(Scanner scanner) {
 
 		Map<String, Integer> map = new HashMap<>();
 		String format2 = "%-10s%-30s%-3s%s%n";
@@ -34,6 +35,5 @@ public class Region10peuplee extends MenuService {
 
 		super.reverse(map, format2, "Région: ");
 
-		return true;
 	}
 }

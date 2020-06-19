@@ -12,6 +12,8 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+import fr.diginamic.exceptions.RechercheException;
+
 /**
  * classe abstraite implementée par tous les services de l'application
  * @author robin
@@ -23,8 +25,9 @@ public abstract class MenuService {
 	 * fait la recherche demandée par l'utilisateur
 	 * @param scanner scanner
 	 * @return boolean non utilisé
+	 * @throws RechercheException 
 	 */
-	public abstract boolean traiter(Scanner scanner);
+	public abstract void traiter(Scanner scanner) throws RechercheException;
 
 	/**
 	 * trie une map puis inverse l'ordre de la map et la retourne en arraylist (pour afficher les X premiers)
